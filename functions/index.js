@@ -3,34 +3,17 @@ const admin = require('firebase-admin')
 const Firestore = require('@google-cloud/firestore')
 const serviceAccount = require('./service_account')
 
-// admin.initializeApp({
-//     credential: admin.credential.cert(serviceAccount),
-//     databaseURL: "https://jdpiqa.firebaseio.com"
-// })
-
 const firestore = new Firestore({
     projectId: 'jdpiqa',
     keyFilename: './service_account.json',
 });
-
-// require('@google-cloud/debug-agent').start({ allowExpressions: true });
-
-// require('@google-cloud/debug-agent').start({
-//     allowExpressions: true,
-//     projectId: 'jdpiqa',
-//     keyFilename: './service_account.json',
-//   });
-
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
 
 exports.getJdpiqaData = functions.https.onRequest((request, response) => {
     const result = []
     
     firestore.collection('questionandanswers').get()
     .then(snapshot => {
-        snapshot.forEach(doc => result.push({ ...doc.data(), id: doc.id }))
+        snapshot.forEach(doc => result.push(Object.assign(doc.data(), { id: doc.id })))
         
         response.status(200).json(result)
     })
