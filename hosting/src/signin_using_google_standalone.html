@@ -1,0 +1,52 @@
+<html>
+    <!-- this file is stand-alone -->
+    <!-- host this file on a webserver to run correctly -->
+    
+    <!-- **********************************************
+     * TODO(DEVELOPER): Use your Client ID below. *
+     ********************************************** -->
+    <!-- <meta name="google-signin-client_id" content="961745701287-9ptlt40c0uqko1apl5v9elfkvbis9e0r.apps.googleusercontent.com">
+    <meta name="google-signin-cookiepolicy" content="single_host_origin">
+    <meta name="google-signin-scope" content="profile email">
+    
+    <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+    
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+  <script>
+
+const provider = new firebase.auth.GoogleAuthProvider()
+
+provider.setCustomParameters({
+  'optional_data': 'user@example.com'
+})
+
+const defaultApp = firebase.initializeApp({
+    apiKey: "AIzaSyAjzNDi4fBMjpUwxBsj_oEcsRsZNcsjF2U",
+    authDomain: "jdpiqa.firebaseapp.com",
+    databaseURL: "https://jdpiqa.firebaseio.com",
+    projectId: "jdpiqa",
+    storageBucket: "jdpiqa.appspot.com",
+    messagingSenderId: "961745701287"
+  })
+
+function onClick() {
+    defaultApp.auth()
+    .signInWithPopup(provider)
+    .then(function(result) {
+      console.log('result--', result)
+    })
+    .catch(function(error) {
+      console.log('err', error)
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+      })
+    }
+
+  </script>
+  <body>
+      <button onclick="onClick()">click</button>
+
+  </body>
+</html>

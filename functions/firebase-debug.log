@@ -1,0 +1,28 @@
+[debug] [2018-10-08T00:18:27.713Z] ----------------------------------------------------------------------
+[debug] [2018-10-08T00:18:27.714Z] Command:       /Users/kid/.nvm/versions/node/v10.9.0/bin/node /Users/kid/.nvm/versions/node/v10.9.0/bin/firebase serve --only functions
+[debug] [2018-10-08T00:18:27.715Z] CLI Version:   5.0.1
+[debug] [2018-10-08T00:18:27.715Z] Platform:      darwin
+[debug] [2018-10-08T00:18:27.715Z] Node Version:  v10.9.0
+[debug] [2018-10-08T00:18:27.716Z] Time:          Sun Oct 07 2018 17:18:27 GMT-0700 (Pacific Daylight Time)
+[debug] [2018-10-08T00:18:27.716Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-08T00:18:27.723Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-08T00:18:27.724Z] > authorizing via signed-in user
+[debug] [2018-10-08T00:18:27.724Z] [iam] checking project jdpiqa for permissions ["firebase.projects.get"]
+[debug] [2018-10-08T00:18:27.725Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/jdpiqa:testIamPermissions  
+
+[debug] [2018-10-08T00:18:30.137Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-08T00:18:30.138Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/jdpiqa  
+ 
+[debug] [2018-10-08T00:18:32.390Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/kid/Documents/react-native/firebase_jdpiqa'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-10-08T00:18:32.825Z] Fetching environment
+[debug] [2018-10-08T00:18:32.827Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/961745701287:getServerAppConfig  
+ 
+[debug] [2018-10-08T00:18:34.097Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-08T00:18:34.097Z] Starting @google-cloud/functions-emulator
+[debug] [2018-10-08T00:18:35.169Z] Parsing function triggers
+[info] ✔  functions: getJdpiqaData: http://localhost:5000/jdpiqa/us-central1/getJdpiqaData

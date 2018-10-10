@@ -1,0 +1,16 @@
+[debug] [2018-10-10T02:53:13.517Z] ----------------------------------------------------------------------
+[debug] [2018-10-10T02:53:13.518Z] Command:       /Users/kid/.nvm/versions/node/v10.9.0/bin/node /Users/kid/.nvm/versions/node/v10.9.0/bin/firebase serve --only hosting
+[debug] [2018-10-10T02:53:13.518Z] CLI Version:   5.0.1
+[debug] [2018-10-10T02:53:13.519Z] Platform:      darwin
+[debug] [2018-10-10T02:53:13.519Z] Node Version:  v10.9.0
+[debug] [2018-10-10T02:53:13.520Z] Time:          Tue Oct 09 2018 19:53:13 GMT-0700 (Pacific Daylight Time)
+[debug] [2018-10-10T02:53:13.520Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-10T02:53:13.527Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-10T02:53:13.527Z] > authorizing via signed-in user
+[debug] [2018-10-10T02:53:13.527Z] [iam] checking project jdpiqa for permissions ["firebase.projects.get"]
+[debug] [2018-10-10T02:53:13.528Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/jdpiqa:testIamPermissions  
+
+[debug] [2018-10-10T02:53:19.028Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-10T02:53:19.029Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/jdpiqa  
+ 
